@@ -1,0 +1,1 @@
+    current=current*-1;

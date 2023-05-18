@@ -1,0 +1,18 @@
+Tendremos en cuenta, hasta la parte de binario al menos.
+
+//declaracion de archivo //FILE * f
+f=fopen("nombrearchivo.extension","letra pra indicar el modo")
+if (f==NULL){//osea no se abrio bien
+    printf("No se abrio el archivo correctamente);
+    return 1;
+    }
+fclose(f); --> muy importante siempre cerrarlo.
+
+que operaciones podemos hacer?
+fgets(string,longitud_string,archivo)//guarda en la string todo lo que vio hasta que encontro un \n o hasta que se llene
+fgetc(file)--> devuelve un caracter apuntado
+feof(file)--> indica si la ultima operacion que se hizo contiene el caracter final de archivo
+fscanf(f, "%d|%f;", &currentC, &currentM)--> se indica el archivo, lo que se va a leer del archivo y ahi se asginan a las variables en cuestion lo que esta ingresado
+ fgets(stringAux, 100, f);--> si por ejemplo lei hasta un \n y lo quiero guardar luego en una estructura, debo cambiar el ultimo caracter por un \0, ya que sino tirara el error al querer hacer comparaciones
+ lo hacemos de la siguiente manera
+    stringAux[strcspn(stringAux, "\n")] = '\0'; 

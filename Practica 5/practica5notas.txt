@@ -1,0 +1,10 @@
+cuando hacemos el file open, si ponemos "w", se sobreescribe todo el contenido dentro del txt.
+-si ponemos "a" se agrega al final del archivo.
+-r es para leer un archivo
+
+cuando usamos fopen, si devuelve 0 esta todo ok
+cuando usamos fclose, si devuelve 0 hay error
+
+stdin y stdout son maneras estandar para salida y entrada
+
+cuando hago feof, siempre tengo que hacer un fscanf antes de la primera linea del archivo en cuestion para verificar si devolvio -1, ya que si la primera leida ya era fin de archivo y yo no lo hice, estare corrido en un lugar y habran errores en el programa
