@@ -14,5 +14,27 @@ fgetc(file)--> devuelve un caracter apuntado
 feof(file)--> indica si la ultima operacion que se hizo contiene el caracter final de archivo
 fscanf(f, "%d|%f;", &currentC, &currentM)--> se indica el archivo, lo que se va a leer del archivo y ahi se asginan a las variables en cuestion lo que esta ingresado
  fgets(stringAux, 100, f);--> si por ejemplo lei hasta un \n y lo quiero guardar luego en una estructura, debo cambiar el ultimo caracter por un \0, ya que sino tirara el error al querer hacer comparaciones
- lo hacemos de la siguiente manera
+ lo hacemos de la siguiente manera:
     stringAux[strcspn(stringAux, "\n")] = '\0'; 
+  //con carga de caracteres
+    //c=getc(f);
+   // while (!feof(f)){
+        //putc(c,out);
+      //  c=getc(f);
+    //}
+    //
+
+   //fgets(string,100,f);  //en el fgets, toma hasta encontrar el caracter \n(bajada de linea), o hasta agotar el espacio de la string
+
+    //while (!feof(f)){
+    //fputs(string,out);
+    //fgets(string,100,f);
+   //}
+
+   // fputs(string,out); //lo copiamos una vez mas porque al detectar el caracter de end of file no pone la ultima cadena(ver como deberia ser la correcta implementacion)
+    
+   
+
+   //fread(string,sizeof(char),100,f); //el fread al parecer me copia lo maximo del archivo o lo que le indico
+
+    //fwrite(string,sizeof(char),strlen(string),out);
